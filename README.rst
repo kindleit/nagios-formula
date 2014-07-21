@@ -36,44 +36,44 @@ Installs the nrpe agent and start the service
 Example Pillar:
 
 .. code:: yaml
-# Nagios Pillar
-# server: <IP/FQDN of main nagios server>
-# users:
-#   <username>:
-#     password: <Password>
-# permissions:
-#   autorized_for_system_information: ['user1','user2']
-#   ...
-#   authorized_for_all_host_commands: ['user1','user2']
-# groups:
-#   <nameofgroup>:
-#     members: <['minion1', 'minion2']>
-#     description: <Descripon of service>
-#     cmd: <Nagios command>
-nagios:
-  server: nagios.example.com
-  users:
-    nadmin:
-      password: Notreal
-    dgarcia:
-      password: Notreal
-  permissions:
-    authorized_for_system_information: ['nagiosadmin']
-    authorized_for_configuration_information: ['nagiosadmin']
-    authorized_for_system_commands: ['nagiosadmin']
-    authorized_for_all_services: ['nagiosadmin']
-    authorized_for_all_hosts: ['nagiosadmin']
-    authorized_for_all_service_commands: ['nagiosadmin']
-    authorized_for_all_host_commands: ['nagiosadmin']
-  groups:
-    ssh:  
-      members: ['srv1', 'srv2', 'srv3']
-      description: 'SSH Service'
-      cmd: check_ssh
-      service_template: generic-service
-    http: 
-      members: ['srv1', 'srv2', 'srv3']
-      description: 'HTTP Service'
-      cmd: check_http
-      service_template: generic-service
+  # Nagios Pillar
+  # server: <IP/FQDN of main nagios server>
+  # users:
+  #   <username>:
+  #     password: <Password>
+  # permissions:
+  #   autorized_for_system_information: ['user1','user2']
+  #   ...
+  #   authorized_for_all_host_commands: ['user1','user2']
+  # groups:
+  #   <nameofgroup>:
+  #     members: <['minion1', 'minion2']>
+  #     description: <Descripon of service>
+  #     cmd: <Nagios command>
+  nagios:
+    server: nagios.example.com
+    users:
+      nadmin:
+        password: Notreal
+      dgarcia:
+        password: Notreal
+    permissions:
+      authorized_for_system_information: ['nagiosadmin']
+      authorized_for_configuration_information: ['nagiosadmin']
+      authorized_for_system_commands: ['nagiosadmin']
+      authorized_for_all_services: ['nagiosadmin']
+      authorized_for_all_hosts: ['nagiosadmin']
+      authorized_for_all_service_commands: ['nagiosadmin']
+      authorized_for_all_host_commands: ['nagiosadmin']
+    groups:
+      ssh:  
+        members: ['srv1', 'srv2', 'srv3']
+        description: 'SSH Service'
+        cmd: check_ssh
+        service_template: generic-service
+      http: 
+        members: ['srv1', 'srv2', 'srv3']
+        description: 'HTTP Service'
+        cmd: check_http
+        service_template: generic-service
 
