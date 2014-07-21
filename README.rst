@@ -36,6 +36,7 @@ Installs the nrpe agent and start the service
 Example Pillar:
 
 .. code:: yaml
+
   # Nagios Pillar
   # server: <IP/FQDN of main nagios server>
   # users:
